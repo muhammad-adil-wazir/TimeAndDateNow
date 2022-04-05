@@ -1,0 +1,77 @@
+/* responsive css - start */
+
+/* 1  ##Device = Desktops  ##Screen = 1281px to higher resolution desktops*/
+@media (min-width: 1281px) {
+  /*Home Page */
+  #timeZone{font-size: calc(2vw);}
+  #currentDate{font-size: calc(4vw);}
+  .navbar-logo h2 {font-size:xx-large;}
+  }
+  
+  /*  ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px  */  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /*Home Page */
+    #currentTime {    font-size: calc(9vw);}
+    #analogClock {width: 30vw; height: 30vw;}
+   
+    /*Namaztiming Home*/
+    .prayerTiles {width:116px;padding:20px 10px 20px 10px;}    
+  }
+  
+  /* 3 ##Device = Tablets, Ipads (portrait)   ##Screen = B/w 768px to 1024px */  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /*Home Page */
+    #analogClock {width: 40vw; height: 40vw;}
+    #currentTime{font-size: calc(8vw) !important; line-height: 10vw !important;}
+    #currentDate{margin-left: 8px;}
+    #_d { font-size: 0em !important; margin: 20px 0px 20px 0px;}
+    #currentDayOfYear, #currentDayOfYearAr, #currentWeekOfMonth, #currentWeekOfYear{font-size: 13px;}
+    #sunRiseTime,#sunSetTime{margin-top: 15px;}
+   
+    /*Namaztiming Home*/
+    .prayerTiles{width: 82px; padding: 10px 5px 10px 5px;}
+    .prayerTiles  h1{ font-size: 18px;}
+    #tblNamazTimeForMonth .d-flex   {font-size: 10px;}
+  }
+  
+  /* 4 ##Device = Tablets, Ipads (landscape)  ##Screen = B/w 768px to 1024p  */  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      
+  }
+  
+  /* 5 ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px  */  
+  @media (min-width: 481px) and (max-width: 767px) {
+    /*Home Page */
+    #analogClock{  margin: auto;}
+    #timeZone{margin-top: 20px; text-align: center;}
+    #currentTime,#currentDate{text-align: center;}
+    .column{ float: left;width: 50%;padding: 10px;  }
+    .suntime-wrapper img{ height: 40px;}
+
+      /*Namaztiming Home*/
+      .boxCard{padding: 10px;}
+       .prayerTiles {margin-right: 22px; margin-bottom: 12px; width: 123px; padding: 10px 5px;}
+       .prayerTiles  h1{ font-size: 18px;}
+       #selectedTodayNamazTiming{font-size: 16px;margin-right: 14px;}
+       #tblNamazTimeForMonth .d-flex   {font-size: 8px;}
+  }
+  
+  /* 6 ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */  
+  @media (min-width: 320px) and (max-width: 480px) {
+    /*Home Page */
+    #analogClock{  width: 90vw; height: 90vw;}
+    #timeZone{margin-top: 20px; text-align: center;}
+    #currentTime,#currentDate,#_d{text-align: center; }
+    #currentDate,#timeZone{font-size: 15px;}
+    .column{ float: left;width: 50%;padding: 10px;  }
+    .suntime-wrapper img{ height: 40px;}
+
+      /*Namaztiming Home*/
+    .boxCard{padding: 10px;}
+    .prayerTiles {margin-right: 10px; margin-bottom: 12px; width: 123px; padding: 10px 5px;}
+    .prayerTiles  h1{ font-size: 18px;}
+    #selectedTodayNamazTiming{font-size: 13px;}
+    #tblNamazTimeForMonth .d-flex   {font-size: 8px;}
+  }
+
+/* responsive css - end */

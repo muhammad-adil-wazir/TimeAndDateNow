@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time and date Now</title>
+    <meta name="description" content="Time and date now is the platform to see the current time based on your location, You can check the time and date of different zones from the map.">
+    <link rel="icon" href="public/images/Logo/favicon.ico">
+
+    <!--Style File-->
+    <link rel="stylesheet" href="public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="public/stylesheets/select2.min.css">
+    <link rel="stylesheet" href="public/stylesheets/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <!--<link rel="stylesheet" href="public/stylesheets/mapbox-gl.css">-->
+    <!--<link rel="stylesheet" href="public/stylesheets/leaflet.css">-->
+    <!--<link rel="stylesheet" href="public/stylesheets/icon-flag.css">-->
+    <!--<link rel="stylesheet" href="public/stylesheets/analog-clock.css">-->
+    <!--<link rel="stylesheet" href="public/stylesheets/font-awesome.css">-->
+    <!--Icon footer-->
+    <!--Responsive file-->
+    <!--<link rel="stylesheet" href="public/stylesheets/responsive.css">-->
+    <!--carousel Code css-->
+    <!--<link rel="stylesheet" href="public/stylesheets/carousel.css">-->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,400italic|Radley|Tangerine" rel="stylesheet"> -->
+    <!--Javascript File-->
+
+    <script src="public/javascripts/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+    <script src="public/javascripts/moment.min.js"></script>
+    <script src="public/javascripts/moment-timezone.min.js"></script>
+    <script src="public/javascripts/moment-hijri.js"></script>
+
+    <script src="public/javascripts/suncalc.min.js"></script>
+    <script src="public/javascripts/PrayTimes.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="../public/javascripts/select2.min.js"></script>
+    <!--Menu js-->
+    <!--<script src="public/javascripts/modernizr.js"></script>-->
+    <!--index.js-->
+    <script src="public/js-page/index.js"></script>
+
+    <!--Responsive JS-->
+    <script src="public/javascripts/multislider.min.js"></script>
+    <!-- <script data-ad-client="ca-pub-7209661352157956" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+</head>
+<body >
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+
+    <a class="navbar-brand navbar-logo change-page" href="views/timeAndDateNow.html" rel="dofollow">
+       <img src="/public/images/Logo/logo.png" alt="timeanddatenow.com" title="Home page timeanddatenow.com" width="50" height="50"> 
+       <h3 class="inline-block valign-middle">Time and Date Now</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="search-main-box justify-content-center">
+            <button id="btnSearch" class="btn-main-search clr-white"><i id="iSearch" class="fas fa-search"></i></button>
+            <select id="drpTopMenuSearchBox" class="js-example-basic-multiple js-states form-control" name="state" multiple="multiple" onchange="onSearchChange()">
+            </select>
+            <!--<input type="text" id="txtTopMenuSearchBox" class="input-main-search" placeholder="Type your city name...">-->
+        </div>
+        <ul class="navbar-nav ml-auto">         
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            <li class="nav-item active" id="pgHome">
+                <a class="change-page nav-link" rel="dofollow" href="views/timeAndDateNow.html"><i class="fas fa-tachometer-alt"></i>Home</a>
+            </li>
+            <li class="nav-item" id="pgPrayerTiming">
+                <a class="change-page nav-link" rel="dofollow" href="views/prayertiming.html">Prayer Timing</a>
+            </li>
+            <li class="nav-item" id="pgCurrencyConverter">
+                <a class="change-page nav-link" rel="dofollow" href="views/currencyconverter.html">Currency Converter</a>
+            </li>
+            <!--<li class="nav-item">
+                <a class="change-page nav-link" rel="dofollow" href="views/calender.html"><i class="far fa-calendar-alt"></i>Calendar</a>
+            </li>-->            
+            <li class="nav-item" id="pgAboutUs">
+                <a class="change-page nav-link" rel="dofollow" href="views/about.html"><i class="far fa-copy"></i>About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="cd-main-content"><!-- main content here --></div>
+<!-- Footer -->
+<footer class="bg-blue-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" target="_blank" href="https://www.facebook.com/Timeanddatenow-102973158649860" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" href="javascript:void()" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" href="javascript:void()" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" href="javascript:void()" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" href="javascript:void()" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" rel="dofollow" href="javascript:void()" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="hidden">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4 text-center">     
+      <h1>About Time and Date Now</h1>
+      <p class="lead col-lg-11">- Time and date now is the platform to see the current time based on your location, You can check the time and date of different zones from the map.</p>
+      <p class="lead col-lg-11">- Get the namaz (prayer) time for today and current. Times are based on the region, by default it will show the current region's prayers time, which can be changed.</p>
+      <p class="lead col-lg-11">- Time and date now gives a currency converting tool where you can convert currencies and get the currency info.</p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase" style="color:burlywood; text-align: left;">Services</h5>
+                <ul class="list-unstyled mb-0">
+                    <li style="text-align: left;">
+                        <a href="views/timeAndDateNow.html" onclick="activateMenuItem('pgHome')" rel="dofollow" class="change-page text-white">Time And Date Now</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="views/prayertiming.html" onclick="activateMenuItem('pgPrayerTiming')" rel="dofollow" class="change-page text-left text-white">Prayer Timing</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="views/currencyconverter.html" onclick="activateMenuItem('pgCurrencyConverter')" rel="dofollow" class="text-white change-page">Currency Converter</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="views/about.html" rel="dofollow" onclick="activateMenuItem('pgAboutUs')" class="change-page text-white">About us</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase" style="color: burlywood; text-align: left;">Major Cities</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(0)" class="text-white" rel="dofollow">New York</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(1)" class="text-white" rel="dofollow">Berlin</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a  href="javascript:void(0)" onclick="updateMainDataByMainCityId(2)" class="text-white" rel="dofollow">London</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(3)" class="text-white" rel="dofollow">Paris</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase" style="color: burlywood; text-align: left;">Major Cities</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(4)" class="text-white" rel="dofollow">Tokyo</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(5)" class="text-white" rel="dofollow">Hong Kong</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(6)" class="text-white" rel="dofollow">Singapore</a>
+                    </li>
+                    <li style="text-align: left;">
+                        <a href="javascript:void(0)" onclick="updateMainDataByMainCityId(7)" class="text-white" rel="dofollow">Bejing</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <!--<h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-white" rel="dofollow">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white" rel="dofollow">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white" rel="dofollow">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white" rel="dofollow">Link 4</a>
+          </li>
+        </ul>-->
+            </div>
+            <!--Grid column-->
+        </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © <span id="Year"></span> Copyright:
+    <a class="text-white" rel="dofollow" target="_blank" href="http://timeanddatenow.com/">TimeAndDateNow.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+</html>

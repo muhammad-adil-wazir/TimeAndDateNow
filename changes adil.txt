@@ -1,0 +1,19 @@
+Linkes Like :
+https://time.is/
+https://www.timeanddate.com/weather/
+http://www.thetimenow.com/
+http://timeanddatenow.com/
+https://24timezones.com/timezone-map
+
+
+
+
+changes 
+
+1.(home page ) change the URL , new url = index.html  .   
+2. (home page) when coming  back to the one page , clear the current timezone countries.
+3.(home page )  if click the other timezone in the home page it must change main data.
+4.(home paage) show the time of all countries when mouse hover in the map.
+5. change title home page 
+
+6.(namaz timing) if change time zone you must change data .

@@ -1,0 +1,142 @@
+<div class="col cover-container d-flex h-100 p-3 mx-auto flex-column container" id="container">
+    <!--<div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 padding-left-0">-->
+    <div class="row">
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <!-- <canvas id="cvsAnalogClock"></canvas> -->
+            <div class="oclock" id="analogClock">
+                <div>
+                    <div class="info-oclock date-oclock"></div>
+                    <div class="info-oclock day-oclock"></div>
+                </div>
+                <div class="dot-oclock"></div>
+                <div>
+                    <div class="hour-hand"></div>
+                    <div class="minute-hand"></div>
+                    <div class="second-hand"></div>
+                </div>
+                <div>
+                    <span class="nh3 hspan">3</span>
+                    <span class="nh6 hspan">6</span>
+                    <span class="nh9 hspan">9</span>
+                    <span class="nh12 hspan">12</span>
+                </div>
+                <div class="diallines"></div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1 class="bold" id="timeZone"></h1>
+                    <p class="bold" id="currentTime"></p>
+                    <h1 class="bold" id="currentDate"></h1>
+                    <h3 id="_d"><span>Day of the Year </span><span id="currentDayOfYear"></span>,<span> Week of the Month </span><span class="bold" id="currentWeekOfMonth"></span>,<span> Week of the Year </span><span class="bold" id="currentWeekOfYear"></span></h3>
+                </div>
+            </div>
+            <div class="row suntime-wrapper margin-0" onclick="updateMainDataByMainCityId(2)">
+                <div class="col-md-6 col-sm-6 col-lg-6 column">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 no-padding text-center">
+                            <img class="inline" src="../public/images/sunrise.png" alt="sunrise Image" />
+                            <p class="sun-text">Sunrise</p>
+                        </div>
+                        <div class="col-lg-8 col-md-6 no-padding text-center">
+                            <h3 id="sunRiseTime"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-lg-6 column">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 no-padding text-center">
+                            <img class="inline" src="../public/images/sunset.png" alt="sunset Image" />
+                            <p class="sun-text">Sunset</p>
+                        </div>
+                        <div class="col-lg-8 col-md-6 no-padding text-center">
+                            <h3 id="sunSetTime"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Multiple Cards -->
+    <!--<div class="row" id="carousel">
+        <div class="cards-content">
+            <div class="container-fluid">
+                <div id="carousel-example-2" class="carousel slide carousel-multi-item" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox" id="body-carousel">
+
+                    </div>
+                    <a rel="dofollow" class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a rel="dofollow" class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+    <!-- /Multiple Cards -->
+    <div id="citiesSlider">
+        <!-- Give wrapper ID to target with jQuery & CSS -->
+        <div class="MS-content">
+        </div>
+        <div class="MS-controls">
+            <button class="MS-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="MS-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </div>
+     <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12" id ="Hijri" >
+        <div class="quote">
+          <span class = "saying">
+            <h3 class="bold bg-blue hijri-date">Hijri Date</h3>
+            <h2 class="bold" id="currentIslamicDateAr"></h2>
+            <h3 class="bold" id="currentIslamicDateEn"></h3>
+            <h5>
+                <span>Day of the Year : </span><span class="bold highlighted-value" id="currentDayOfYearAr"></span>
+                <span> Total Days in the Month : </span><span class="bold highlighted-value" id="currentDaysInTheMonthAr"></span>
+                <span> Week of the Year : </span><span class="bold highlighted-value" id="currentWeekOfYearAr"></span>
+              </h5>
+         </span>
+          </div>
+      </div>
+    </div> 
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <h2 class="bold text-center bg-blue hijri-date">Countries in the current Time Zone</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="boxCard currentTimeZoneCountries" id="currentTimeZoneCountries"></div>
+        </div>
+    </div>
+    <!--<p>e now is the platform to see the current time based on your location, You can check the time and date of different zones from the map.
+
+      - Get the namaz (prayer) time for today and current. Times are based on the region, by default it will show the current region's prayers time, which can be changed.
+
+      - Time and date now gives a currency converting tool where you can convert currencies and get the currency info.  </p>-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="timezone-map-wrapper ">
+                <svg class="timezone-map"></svg>
+                <!-- <div class="current-timezone-countries" id="currentTimeZoneCountries-wrapper">
+                  <h3>Countries in the current Time Zone</h3>
+                  <hr/>
+                  <div class="currentTimeZoneCountries"></div>
+                </div> -->
+                <div class="tooltip hidden"></div>
+            </div>
+        </div>
+    </div>
+    <!--</div>
+    </div>-->
+</div>   
+<script src="../public/js-page/timeAndDateNow.js"></script>

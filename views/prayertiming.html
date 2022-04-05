@@ -1,0 +1,50 @@
+
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column container">
+    <div class="boxCard">
+        <div class="row">
+            <div class="col-lg-8 col-md-8  col-sm-9">
+                <h1><b>Prayer time in </b><small id="timeZone"></small></h1>
+            </div>
+            <div class="col-lg-4 col-md-4  col-sm-3">
+                <label><b>Change Location:</b></label>
+                <select id="countries" class="form-control select2" onchange="showTimeZone();"></select>
+            </div>
+        </div>
+        </br>
+        <div class="row  justify-content-center" id="tblNamazTimeToday"></div>
+        <div class="row pt-3 justify-content-end"><h1 id="selectedTodayNamazTiming"></h1></div>
+        <br>
+        <hr>
+        <h3 class="bold bg-blue about-heading text-center" id="selectedMonthNamazTiming"> </h3>
+
+        <h2>Monthly Prayer Time </h2>
+        <p>The table below shows the prayer time for the current month, however you can change the month and year to see the prayer time for your desired month. <code></code></p>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-4">
+                <label><b>Change Month:</b></label>
+                <select id="Months" class="form-control select2"> </select>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4">
+                <label><b>Change Year : </b></label>
+                <select id="Years" class="form-control select2"> </select>
+            </div>
+            <div class="col-md-2 col-sm-2 col-lg-3">
+                <button class="btn btn-lg btn-primary btn-search" type="button" onclick="loadNamazTblForChoose()"><b>Search</b></button>
+            </div>
+        </div>
+
+        <!--Table-->
+        <div class="row">
+            <p class="lead col-lg-12"> </p>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered jambo_table table-striped" id="tblNamazTimeForMonth"></table><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>$('.select2').select2();</script>
+<script src="public/js-page/prayertiming.js"></script>

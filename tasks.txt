@@ -1,0 +1,14 @@
+
+1- compare the time of the current city with other large cities.
+go to time.is (https://time.is/Los_Angeles)
+and see how there are comparing the time of the current city with the other big cities in the world.
+2- add a timezone page in the website
+from the link below you will get the idea of a timezone page
+https://time.is/time_zones
+we have to show the popular city in each timezone.
+3- search bar in the menu
+4- time comparison
+user should be able to compare the time of 2,3 cities.
+there should be dropdowns and you can select the cities and the table below would show the time comparison.
+like time, timezone, sun set time, date, week , and any other information.
+5 - switch between 24 hours and 12 hours(AM/PM) format.
